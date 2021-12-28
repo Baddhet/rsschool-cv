@@ -1,1 +1,1 @@
-# rsschool-cv
+https://baddhet.github.io/rsschool-cv/
