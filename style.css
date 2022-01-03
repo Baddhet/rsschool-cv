@@ -1,0 +1,85 @@
+body {
+  background-color: rgb(59, 59, 59);
+  color: white;
+}
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  font-size: 30px;
+  height: 80px;
+  background: rgb(40, 40, 40);
+  background: -moz-linear-gradient(90deg, rgb(40, 40, 40) 30%, rgb(59, 59, 59) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(40, 40, 40) 30%, rgb(59, 59, 59) 100%);
+  background: -o-linear-gradient(90deg, rgb(40, 40, 40) 30%, rgb(59, 59, 59) 100%);
+  background: -ms-linear-gradient(90deg, rgb(40, 40, 40) 30%, rgb(59, 59, 59) 100%);
+  background: linear-gradient(180deg, rgb(40, 40, 40) 30%, rgb(59, 59, 59) 100%);
+}
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__list {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 80px;
+}
+
+.header__list:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 21px;
+  left: 0;
+  background-color: white;
+}
+
+.main__photo {
+  display: block;
+  margin: 20px auto;
+  height: 40vh;
+  border-radius: 50%;
+}
+
+.main__hey {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.main__codes {
+  height: 290px;
+  overflow: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: rgb(70, 70, 70);
+}
+
+.main__courses{
+  margin: 30px 0;
+}
+
+.main__courses span, .main__courses img {
+  font-size: 43px;
+  height: 30px;
+}
+
+.main__html {
+  margin-left: 20px;
+  height: 39px !important;
+}
+
+.footer__contacts i {
+  line-height: 21px;
+  margin-right: 5px;
+}
