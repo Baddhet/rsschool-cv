@@ -23,18 +23,11 @@ body {
 }
 
 .header__inner {
-}
-
-.header__inner ul {
   display: flex;
   justify-content: flex-end;
 }
 
 .header__list {
-  list-style-type: none;
-}
-
-.header__list a {
   position: relative;
   color: white;
   text-decoration: none;
@@ -42,12 +35,12 @@ body {
   line-height: 80px;
 }
 
-.header__list a:hover::after {
+.header__list:hover::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: -3px;
+  bottom: 21px;
   left: 0;
   background-color: white;
 }
