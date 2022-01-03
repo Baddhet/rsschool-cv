@@ -73,7 +73,6 @@ let showItems = (currentPage) => {
 ```
 ## Courses
 HTML Academy
-## English
+## Language
 A0 Starter
-## Deutsch
 A1 Elementary

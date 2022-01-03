@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Dmitii Teplikov</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+          <a class="header__list" href="#contacts">Contacts</a> 
+          <a class="header__list" href="">Skills</a>
+          <a class="header__list" href="#code">Code</a>
+          <a class="header__list" href="#courses">Courses</a>
+          <a class="header__list" href="">Language</a>
+          <a class="header__list" href="">My forks</a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="main__inner">
+        <img class="main__photo" src="assets/img/photo.jpg" alt="photo">
+        <h1 class="main__hey">Hey, my name is Dmitry!</h1>
+
+        <div class="main__code">
+          <p>My code</p>
+          <pre class="main__codes" id="code">
+
+  //paginations
+  let items = [
+    { name: "1" },
+    { name: "2" },
+    { name: "3" },
+  ];
+  
+  const itemsOfPages = 3;
+  (function () {
+    const listItem = document.querySelector(".pagination ul");
+    const createPages = Math.ceil(items.length / itemsOfPages);
+    for (let i = 0; i < createPages; i++) {
+      const li = document.createElement("li");
+      li.classList.add("page-number");
+      li.innerHTML = i + 1;
+      listItem.appendChild(li);
+    }
+  
+  })();
+  
+  const paginationList = document.querySelector(".pagination__list");
+  const pageNumbers = document.querySelectorAll(".page-number");
+  
+  for (const pageNumber of pageNumbers) {
+    pageNumber.addEventListener('click', () => {
+      for (let i = 0; i < pageNumbers.length; i++) {
+        pageNumbers[i].classList.remove("current-page");
+      }
+      let currentPage = +pageNumber.innerHTML;
+      pageNumber.classList.add("current-page");
+      showItems(currentPage);
+    })
+  }
+  
+  let showItems = (currentPage) => {
+    let start = (currentPage - 1) * itemsOfPages;
+    let end = start + itemsOfPages;
+    let notes = items.slice(start, end);
+    paginationList.innerHTML = " ";
+    for (const note of notes) {
+      const square = document.createElement("div");
+      square.classList.add("pagination__items");
+      square.innerHTML = note.name + " " + note.age;
+      paginationList.appendChild(square);
+    }
+  };
+          </pre>
+        </div>
+        <div class="main__courses" id="courses">
+          <p>Courses</p>
+          <img src="assets/icons/code-basics.png" alt="">
+          <span>Code Basics</span>
+          <img class="main__html" src="/assets/icons/logo.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_inner" id="contacts">
+        <div class="footer__contacts">
+          <i class="fas fa-globe"></i>
+          <span>Russia, Saint-Petersburg</span>
+        </div>
+        <div class="footer__contacts">
+          <i class="far fa-envelope"></i>
+          <span>tenjibiu@gmail.com</span>
+        </div>
+        <div class="footer__contacts">
+          <i class="fab fa-github"></i>
+          <span>baddhet</span>
+        </div>
+        <div class="footer__contacts">
+          <i class="fab fa-telegram-plane"></i>
+          <span>@DmitriiTepliakov</span>
+        </div>
+        <div class="footer__contacts">
+          <i class="fab fa-discord"></i>
+          <span>Tenjibiu#2616</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
